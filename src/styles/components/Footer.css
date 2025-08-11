@@ -1,0 +1,116 @@
+/* CSS personalizado que complementa Bootstrap */
+
+.custom-footer {
+    background-color: #0a290a !important;
+    color: #ffffff;
+    border-top-color: #dee2e6 !important;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente */
+    text-align: center;
+    width: 300px;
+    margin: 0 auto; /* Centra el footer */
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+/* Override de Bootstrap para tu estilo personalizado */
+.bg-custom {
+    background: linear-gradient(135deg, #0a290a 0%, #026939 100%) !important;
+}
+
+/* Contenedor del texto centrado */
+.Text {
+    text-align: center;
+    width: 100%;
+}
+
+/* Efecto hover personalizado para el enlace */
+.custom-link {
+    color: #f7f7f7 !important;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    padding: 0.2rem 0.2rem;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    text-decoration: none;
+}
+
+.custom-link:hover {
+    color: #39f8e8 !important;
+    background-color: rgba(69, 236, 214, 0.534);
+    transform: translateY(2px);
+    box-shadow: 0 4px 8px rgba(74, 231, 205, 0.445);
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+}
+
+/* Animación personalizada */
+.custom-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #02d85b;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.custom-link:hover::after {
+    width: 90%;
+}
+
+/* Responsive personalizado */
+@media (max-width: 768px) {
+    .custom-footer {
+        width: 280px; /* Un poco más angosto en tablets */
+        padding: 1rem 0 !important;
+    }
+    
+    .Text {
+        font-size: 0.9rem !important;
+    }
+    
+    .custom-link {
+        display: inline !important; /* Mantiene en línea */
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-footer {
+        width: 250px; /* Más angosto en móviles */
+        padding: 0.8rem 0 !important;
+        min-height: 35px;
+    }
+    
+    .Text {
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Efecto de entrada */
+.custom-footer {
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
